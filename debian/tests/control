@@ -1,0 +1,6 @@
+Test-Command: wifite --help
+Restrictions: needs-root, allow-stderr
+
+Tests: unittests
+Depends: @, pyrit
+Restrictions: allow-stderr

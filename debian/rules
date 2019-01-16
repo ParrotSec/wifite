@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with python2
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	python -m unittest discover tests -v
+	# Python 3 support is documented upstream but not yet ready
+	# for prime time (in 2.1.6)
+	#python3 -m unittest discover tests -v
+endif

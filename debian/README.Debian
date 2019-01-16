@@ -1,0 +1,10 @@
+Wifite for  Debian.
+-----------------------
+Unfortunately, Cowpatty isn't included in official debian repositories, for that reason, you
+need to install Cowpatty if you want to use this tool to crack WPA networks.
+
+http://sourceforge.net/projects/cowpatty/
+
+-- Daniel Echeverry <epsilon77@gmail.com>  Mon, 30 Jul 2012 20:56:13 -0500
+ 
+
