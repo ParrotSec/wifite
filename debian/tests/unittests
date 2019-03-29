@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Run the unit tests outside of the source tree
+cp -a tests $AUTOPKGTEST_TMP/
+cd $AUTOPKGTEST_TMP/
+export PYTHONPATH=/usr/share/wifite
+
+python -m unittest discover tests -v

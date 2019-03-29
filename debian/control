@@ -1,0 +1,28 @@
+Source: wifite
+Section: net
+Priority: optional
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Uploaders: Daniel Echeverry <epsilon77@gmail.com>
+Build-Depends: python,
+ debhelper-compat (= 11),
+ dh-python,
+ pyrit <!nocheck>,
+ tshark <!nocheck>,
+ aircrack-ng <!nocheck>,
+# cowpatty <!nocheck>, # Once available in Debian too
+Standards-Version: 4.3.0
+Homepage: https://github.com/derv82/wifite2
+Vcs-Git: https://salsa.debian.org/pkg-security-team/wifite.git
+Vcs-Browser: https://salsa.debian.org/pkg-security-team/wifite
+
+Package: wifite
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, aircrack-ng, reaver, tshark, net-tools
+Recommends: hcxtools, hcxdumptool
+Suggests: pyrit, macchanger
+Description: Python script to automate wireless auditing using aircrack-ng tools
+ Wifite is a tool to audit WEP or WPA encrypted wireless networks.
+ It uses aircrack-ng, pyrit, reaver, tshark tools to perform the audit.
+ .
+ This tool is customizable to be automated with only a few arguments
+ and can be trusted to run without supervision.
